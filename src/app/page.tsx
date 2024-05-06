@@ -1,12 +1,13 @@
-import { css } from "@/panda/css";
 import { styled } from "@/panda/jsx";
 
-const ConstButton = styled("button", { base: { bgColor: "rocketseat" } });
+const ConstButton = styled("button", {
+	base: { bgColor: "gray.300", cursor: "pointer", padding: "40" },
+});
 
 export default function Home() {
 	return (
 		<div>
-			<p className={css({ color: "rocketseat" })}>helo world</p>
+			<ConstButton> heoooolo </ConstButton>
 		</div>
 	);
 }
