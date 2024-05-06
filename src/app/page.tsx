@@ -1,10 +1,7 @@
-"use client";
-
 import Carousel from "@/app/(components)/carousel";
-import * as S from "./styles"
-import "keen-slider/keen-slider.min.css";
+import * as S from "./styles";
 
-export default function Home() {
+export default async function Home() {
 	return (
 		<S.Container>
 			<Carousel />

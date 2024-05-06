@@ -3,6 +3,7 @@
 import { useKeenSlider } from "keen-slider/react";
 import * as S from "./styles";
 import Image from "next/image";
+import "keen-slider/keen-slider.min.css";
 
 export default function Carousel() {
 	const [sliderRef] = useKeenSlider({ slides: { perView: 3, spacing: 48 } });

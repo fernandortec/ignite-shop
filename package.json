@@ -12,7 +12,8 @@
     "keen-slider": "^6.8.6",
     "next": "14.2.3",
     "react": "^19.0.0-beta-1beb73de0f-20240503",
-    "react-dom": "^19.0.0-beta-1beb73de0f-20240503"
+    "react-dom": "^19.0.0-beta-1beb73de0f-20240503",
+    "zod": "^3.23.0-beta.2"
   },
   "devDependencies": {
     "@pandacss/dev": "^0.39.0",
