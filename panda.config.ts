@@ -1,22 +1,5 @@
-import { defineConfig, defineGlobalStyles } from "@pandacss/dev";
-
-const globalStyles = defineGlobalStyles({
-	"*": {
-		margin: 0,
-		padding: 0,
-		boxSizing: "border-box",
-	},
-
-	body: {
-		fontSmoothing: "antialiased",
-		bgColor: "gray.900",
-		color: "gray.100",
-	},
-	"body,input,textarea,button": {
-		fontFamily: "Roboto",
-		fontWeight: 400,
-	},
-});
+import { globalStyles } from "@/styles/global";
+import { defineConfig } from "@pandacss/dev";
 
 export default defineConfig({
 	preflight: true,
@@ -35,6 +18,13 @@ export default defineConfig({
 
 					"green.300": { value: "#00b37e" },
 					"green.500": { value: "#00875f" },
+				},
+
+				fontSizes: {
+					md: { value: "1.125rem" },
+					lg: { value: "1.25rem" },
+					xl: { value: "1.5rem" },
+					"2xl": { value: "2rem" },
 				},
 			},
 		},
