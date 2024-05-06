@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "keen-slider": "^6.8.6",
     "next": "14.2.3",
     "react": "^19.0.0-beta-1beb73de0f-20240503",
     "react-dom": "^19.0.0-beta-1beb73de0f-20240503"
@@ -20,7 +21,7 @@
     "@types/react-dom": "^18.3.0",
     "typescript": "^5.5.0-beta"
   },
-    "config": {
+  "config": {
     "commitizen": {
       "path": "cz-emoji"
     }

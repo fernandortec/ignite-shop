@@ -3,7 +3,6 @@ import { styled } from "@/panda/jsx";
 export const Container = styled("main", {
 	base: {
 		display: "flex",
-		gap: "3rem",
 		width: "100%",
 		maxWidth: "calc(100vw - ((100vw - 1180px) / 2))",
 		marginLeft: "auto",
@@ -15,7 +14,6 @@ export const Product = styled("div", {
 	base: {
 		background: "linear-gradient(180deg, #1ea483 0%, #7465d4 100%)",
 		borderRadius: "8px",
-		padding: "0.25rem",
 		cursor: "pointer",
 		position: "relative",
 		display: "flex",

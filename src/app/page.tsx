@@ -1,25 +1,13 @@
-import Image from "next/image";
-import * as S from "./page-styles";
+"use client";
+
+import Carousel from "@/app/(components)/carousel";
+import * as S from "./styles"
+import "keen-slider/keen-slider.min.css";
 
 export default function Home() {
 	return (
 		<S.Container>
-			<S.Product>
-				<Image alt="" src="/assets/first-shirt.png" width="520" height="480" />
-
-				<footer>
-					<strong>Camiseta X</strong>
-					<span>R$ 79,90</span>
-				</footer>
-			</S.Product>
-			<S.Product>
-				<Image alt="" src="/assets/first-shirt.png" width="520" height="480" />
-
-				<footer>
-					<strong>Camiseta X</strong>
-					<span>R$ 79,90</span>
-				</footer>
-			</S.Product>
+			<Carousel />
 		</S.Container>
 	);
 }
