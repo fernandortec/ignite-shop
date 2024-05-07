@@ -1,7 +1,6 @@
 "use client";
 
 import createCheckout from "@/api/stripe/create-checkout";
-import { redirect } from "next/navigation";
 import { useRouter } from "next/navigation";
 import * as S from "./styles";
 

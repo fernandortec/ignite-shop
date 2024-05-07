@@ -16,8 +16,6 @@ export async function getProductDetails(
 
 	const price = product.default_price as Stripe.Price;
 
-	console.log(product)
-
 	const mappedProduct: ProductDetailed = {
 		id: product.id,
 		name: product.name,
