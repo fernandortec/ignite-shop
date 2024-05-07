@@ -1,4 +1,9 @@
-import * as cls from "@/app/products/[id]/styles";
+import { getProductDetails } from "@/api/stripe/get-product-details";
+import { PurchaseForm } from "@/app/products/[id]/(components)/purchase-form";
+import * as S from "@/app/products/[id]/styles";
+import { priceFormatter } from "@/helpers/formatter";
+import { unstable_cache } from "next/cache";
+import Image from "next/image";
 
 interface Params {
 	params: { id: string };
@@ -9,26 +14,23 @@ export default async function ProductPage({
 }: Params): Promise<JSX.Element> {
 	const { id } = params;
 
+	const product = await unstable_cache(() => getProductDetails(id), [], {
+		revalidate: 60 * 60,
+	})();
+
 	return (
-		<main className={cls.productContainer}>
-			<div className={cls.imageContainer}>
-				<p>opa</p>
+		<main className={S.productContainer}>
+			<div className={S.imageContainer}>
+				<Image src={product.imageUrl} alt="" width={520} height={480} />
 			</div>
 
-			<div className={cls.productDetails}>
-				<h1>Camiseta 01</h1>
-				<span> R$ 79.90</span>
+			<div className={S.productDetails}>
+				<h1>{product.name}</h1>
+				<span>{priceFormatter.format(product.price)}</span>
 
-				<p>
-					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis,
-					obcaecati nostrum nemo porro illum, quaerat harum quis perferendis
-					sunt similique est dolorem maiores voluptas expedita sint debitis odit
-					ipsam in quidem tempore laudantium. Eligendi fuga adipisci eveniet
-					numquam? Sint cum aspernatur omnis harum dolorum dignissimos a sed
-					recusandae tempore error.
-				</p>
+				<p>{product.description}</p>
 
-				<button type="button">Comprar agora</button>
+				<PurchaseForm priceId={product.priceId} />
 			</div>
 		</main>
 	);

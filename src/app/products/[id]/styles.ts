@@ -49,20 +49,4 @@ export const productDetails = css({
 		lineHeight: 1.6,
 		color: "gray.300",
 	},
-
-	"& button": {
-		marginTop: "auto",
-		backgroundColor: "green.500",
-		border: 0,
-		borderRadius: 8,
-		padding: "1.25rem",
-		cursor: "pointer",
-		fontWeight: "bold",
-		transition: "all 0.5s",
-		fontSize: "md",
-
-		_hover: {
-			backgroundColor: "green.300",
-		},
-	},
 });

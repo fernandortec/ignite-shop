@@ -1,12 +1,6 @@
-import type Stripe from "stripe";
+import type { Product } from "@/api/stripe/product";
 import { stripe } from "@/lib/stripe";
-
-export interface Product {
-	id: string;
-	name: string;
-	price: number;
-	imageUrl: string;
-}
+import type Stripe from "stripe";
 
 export async function findStripeProducts(): Promise<Product[]> {
 	const response = await stripe.products.list({
