@@ -32,7 +32,7 @@ The best techonological shirts right here!
 
 
 <h4 align="center"> 
-	 #### 🚧 Ignite shop - concluído 🚀 🚧
+	 #### 🚧 Ignite shop - finished 🚀 🚧
 </h4>
 
 <p align="center">
