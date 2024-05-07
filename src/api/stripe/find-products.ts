@@ -4,11 +4,11 @@ import { stripe } from "@/lib/stripe";
 export interface Product {
 	id: string;
 	name: string;
-	imageUrl: string;
 	price: number;
+	imageUrl: string;
 }
 
-export async function getStripeProducts(): Promise<Product[]> {
+export async function findStripeProducts(): Promise<Product[]> {
 	const response = await stripe.products.list({
 		expand: ["data.default_price"],
 	});

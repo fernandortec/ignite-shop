@@ -22,7 +22,7 @@ export default function RootLayout({
 				<Container>
 					<Header>
 						<Image alt="" src="/assets/logo.svg" width={56} height={56} />
-						Ignite shop
+						<h1>Ignite shop</h1>
 					</Header>
 					{children}
 				</Container>

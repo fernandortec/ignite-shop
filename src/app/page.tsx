@@ -1,6 +1,6 @@
+import { getStripeProducts } from "@/api/stripe/find-products";
 import { Carousel } from "@/app/(components)/carousel";
 import { unstable_cache } from "next/cache";
-import { getStripeProducts } from "@/api/get-stripe-products";
 
 import * as S from "./styles";
 

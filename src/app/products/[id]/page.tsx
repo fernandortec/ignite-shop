@@ -4,7 +4,11 @@ interface Params {
 	params: { id: string };
 }
 
-export default function ProductPage({ params }: Params): JSX.Element {
+export default async function ProductPage({
+	params,
+}: Params): Promise<JSX.Element> {
+	const { id } = params;
+
 	return (
 		<main className={cls.productContainer}>
 			<div className={cls.imageContainer}>

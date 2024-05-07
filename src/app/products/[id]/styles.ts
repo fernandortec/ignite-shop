@@ -32,6 +32,7 @@ export const productDetails = css({
 
 	"& h1": {
 		fontSize: "2xl",
+		fontWeight: "bold",
 		color: "gray.300",
 	},
 

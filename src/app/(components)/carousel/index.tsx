@@ -3,9 +3,9 @@
 import Image from "next/image";
 
 import "keen-slider/keen-slider.min.css";
-import { useKeenSlider } from "keen-slider/react";
+import type { Product } from "@/api/stripe/find-products";
 import { priceFormatter } from "@/helpers/formatter";
-import type { Product } from "@/api/get-stripe-products";
+import { useKeenSlider } from "keen-slider/react";
 
 import * as S from "./styles";
 
@@ -13,13 +13,17 @@ interface CarouselProps {
 	products: Product[];
 }
 
-export  function Carousel({ products }: CarouselProps) {
+export function Carousel({ products }: CarouselProps) {
 	const [sliderRef] = useKeenSlider({ slides: { perView: 3, spacing: 48 } });
 
 	return (
 		<S.Container ref={sliderRef} className="keen-slider">
 			{products.map((product) => (
-				<S.Product href={`/products/${product.id}`} key={product.id} className="keen-slider__slide">
+				<S.Product
+					href={`/products/${product.id}`}
+					key={product.id}
+					className="keen-slider__slide"
+				>
 					<Image alt="" src={product.imageUrl} width="520" height="480" />
 
 					<footer>
