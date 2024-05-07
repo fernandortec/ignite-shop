@@ -3,8 +3,15 @@ import Link from "next/link";
 import { stripe } from "@/lib/stripe";
 import type Stripe from "stripe";
 
+import type { Metadata } from "next";
 import Image from "next/image";
 import * as s from "./styles";
+
+export const metadata: Metadata = {
+	title: "Sucesso | Ignite shop",
+	description: "Parabéns por ter efetuado a compra",
+	robots: "noindex"
+};
 
 interface SuccessPage {
 	params: unknown;
@@ -14,7 +21,7 @@ interface SuccessPage {
 export default async function SuccessPage({
 	searchParams,
 }: SuccessPage): Promise<JSX.Element> {
-  if(!searchParams.session_id) return <p>Produto não identificado</p>
+	if (!searchParams.session_id) return <p>Produto não identificado</p>;
 
 	const session = await stripe.checkout.sessions.retrieve(
 		searchParams.session_id,

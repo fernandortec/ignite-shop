@@ -2,8 +2,14 @@ import { getProductDetails } from "@/api/stripe/get-product-details";
 import { PurchaseForm } from "@/app/products/[id]/(components)/purchase-form";
 import * as S from "@/app/products/[id]/styles";
 import { priceFormatter } from "@/helpers/formatter";
+import type { Metadata } from "next";
 import { unstable_cache } from "next/cache";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+	title: "Produto | Ignite shop",
+	description: "Veja os detalhes do produto",
+};
 
 interface Params {
 	params: { id: string };
