@@ -12,8 +12,8 @@ export const globalStyles = defineGlobalStyles({
 		bgColor: "gray.900",
 		color: "gray.100",
 	},
+	
 	"body,input,textarea,button": {
-		fontFamily: "Roboto",
 		fontWeight: 400,
 	},
 });

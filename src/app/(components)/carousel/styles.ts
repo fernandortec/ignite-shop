@@ -1,4 +1,5 @@
 import { styled } from "@/panda/jsx";
+import Link from "next/link";
 
 export const Container = styled("main", {
 	base: {
@@ -10,7 +11,7 @@ export const Container = styled("main", {
 	},
 });
 
-export const Product = styled("div", {
+export const Product = styled(Link, {
 	base: {
 		background: "linear-gradient(180deg, #1ea483 0%, #7465d4 100%)",
 		borderRadius: "8px",

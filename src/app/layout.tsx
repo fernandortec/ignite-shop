@@ -2,6 +2,7 @@ import { Container, Header } from "@/styles/layout";
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "../../public/globals.css";
+import Image from "next/image";
 
 const roboto = Roboto({ subsets: ["latin"], weight: ["400", "700"] });
 
@@ -19,7 +20,10 @@ export default function RootLayout({
 		<html lang="en">
 			<body className={roboto.className}>
 				<Container>
-					<Header />
+					<Header>
+						<Image alt="" src="/assets/logo.svg" width={56} height={56} />
+						Ignite shop
+					</Header>
 					{children}
 				</Container>
 			</body>

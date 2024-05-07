@@ -13,13 +13,13 @@ interface CarouselProps {
 	products: Product[];
 }
 
-export default function Carousel({ products }: CarouselProps) {
+export  function Carousel({ products }: CarouselProps) {
 	const [sliderRef] = useKeenSlider({ slides: { perView: 3, spacing: 48 } });
 
 	return (
 		<S.Container ref={sliderRef} className="keen-slider">
 			{products.map((product) => (
-				<S.Product key={product.id} className="keen-slider__slide">
+				<S.Product href={`/products/${product.id}`} key={product.id} className="keen-slider__slide">
 					<Image alt="" src={product.imageUrl} width="520" height="480" />
 
 					<footer>
